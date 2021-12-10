@@ -36,8 +36,6 @@ async def get_image(path, link_to_photo):
                         await f.write(content)
 
             print('Image is save', name[-1])
-        # else:
-        #     print('Image is does not exist')
 
     except FileNotFoundError as f:
         print('Need to specify a new path')
