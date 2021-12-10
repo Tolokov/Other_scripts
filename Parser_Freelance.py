@@ -349,7 +349,7 @@ class Scraper(Sites, Session):
         for post in reversed(all_works):
             print(
                 f'-' * 23,
-                f'\n{post[1]}\t{post[2]}\n'
+                f'\n{post[1]}\n{post[2]}\n'
                 # f'оплата: {post[3]}\t ответов:{post[4]}\n'
                 f'{post[5]}'
             )
