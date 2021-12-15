@@ -8,7 +8,7 @@
 :mag_right: [Stocks parser](#freelance-stocks-parser)
 
 :chart_with_downwards_trend: 
-[Data Analyst](#results-of-the-banned-sites-registry-over-9-years)
+[Data analysis](#results-of-the-banned-sites-registry-over-9-years)
 
 ## Pentagon async parser
 Saving images from the database.
