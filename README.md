@@ -3,7 +3,7 @@
 ![python](https://img.shields.io/badge/python-3.10-green)
 ![python](https://img.shields.io/github/repo-size/Tolokov/Pets?color=green)
 
-:credit_card:[Internet catalog](#Internet catalog)
+:credit_card:[Internet catalog](#internet-catalog)
 
 :mag_right: [Async parser](#pentagon-async-parser)
 
