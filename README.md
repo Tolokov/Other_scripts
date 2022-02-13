@@ -3,7 +3,7 @@
 ![python](https://img.shields.io/badge/python-3.10-green)
 ![python](https://img.shields.io/github/repo-size/Tolokov/Pets?color=green)
 
-:credit_card:[Internet catalog ](#Internet catalog)
+:credit_card:[Internet catalog](#Internet catalog)
 
 :mag_right: [Async parser](#pentagon-async-parser)
 
@@ -12,7 +12,7 @@
 :chart_with_downwards_trend: 
 [Data analysis](#results-of-the-banned-sites-registry-over-9-years)
 
-## Internet catalog 
+## Internet catalog
 Development of a site with a catalog of goods "E-shopper" 
 >_<http://e-shopper.space/>_
 
