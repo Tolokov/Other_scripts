@@ -3,7 +3,7 @@
 
 
 import json
-from Country import country, governments
+from Country import country
 
 
 def main():

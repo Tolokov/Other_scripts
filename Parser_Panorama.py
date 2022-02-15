@@ -163,6 +163,7 @@ def main(_proxy, _token, _host, _user, _pass):
         raise submit_a_bug(telegram_token, exception)
 
 
+# 2022/02/15 premiere: 'Uncharted'
 if __name__ == '__main__':
     _proxy = ''
     _token = ''

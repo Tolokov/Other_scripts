@@ -1,5 +1,3 @@
-# 2021/09/24 news: Global Climate Strike
-
 import datetime
 import re
 import lxml
@@ -400,5 +398,6 @@ def main():
     print(Work)
 
 
+# 2021/09/24 news: Global Climate Strike
 if __name__ == "__main__":
     main()

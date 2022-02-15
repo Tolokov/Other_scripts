@@ -1,6 +1,3 @@
-# https://www.defense.gov/
-# 2021/09/05 news: Yandex withstood the largest DDOS attack in the history of Runet
-
 import aiohttp
 import asyncio
 from bs4 import BeautifulSoup
@@ -90,6 +87,7 @@ async def main():
     await run(first_page, last_page, step, path)
 
 
+# 2021/09/05 news: Yandex withstood the largest DDOS attack in the history of Runet
 if __name__ == '__main__':
     main_loop = asyncio.get_event_loop()
     main_loop.run_until_complete(main())
