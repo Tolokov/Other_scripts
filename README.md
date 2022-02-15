@@ -13,6 +13,7 @@
 
 :chart_with_downwards_trend: [Data analysis](#results-of-the-banned-sites-registry-over-9-years)
 
+
 ## Internet catalog
 
 Development of a site with a catalog of goods "E-shopper"
@@ -22,20 +23,24 @@ Development of a site with a catalog of goods "E-shopper"
 
 ![Site functionality](https://github.com/Tolokov/Shop/blob/master/static/gif/functionality.gif?raw=true)
 
+
 ## Collecting news and publishing to the Telegram
 
 > _<https://t.me/NewsPanorama>_
 
 ![Panorama parser](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/telegram_img2.png?raw=true "Photos")
 
+
 ## Pentagon async parser
 
 Saving images from the database.
 ![Pentagon async parser](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/pentagon_img.png?raw=true "Photos")
 
+
 ## Freelance stocks parser
 
 ![Freelance stocks parser](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/parser_img.png?raw=true "Console result")
+
 
 ## Results of the Banned Sites Registry over 9 years
 
