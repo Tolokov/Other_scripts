@@ -28,7 +28,7 @@ Development of a site with a catalog of goods "E-shopper"
 
 > _<https://t.me/NewsPanorama>_
 
-![Panorama parser](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/telegram_img2.png?raw=true "Photos")
+![Panorama parser](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/telegram_img3.png?raw=true "Photos")
 
 
 ## Pentagon async parser
