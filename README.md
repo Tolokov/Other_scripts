@@ -5,6 +5,8 @@
 
 :credit_card:[Internet catalog](#internet-catalog)
 
+:mega: [Snake](#snake)
+
 :mega: [Parse and publish](#collecting-news-and-publishing-to-the-telegram)
 
 :mag_right: [Async parser](#pentagon-async-parser)
@@ -21,7 +23,15 @@ Development of a site with a catalog of goods "E-shopper"
 
 > _<https://github.com/Tolokov/Shop>_
 
-![Site functionality](https://github.com/Tolokov/Shop/blob/master/static/gif/functionality.gif?raw=true)
+![Site functionality](https://github.com/Tolokov/Shop/blob/master/static/gif/functionality.gif?raw=true "GIF")
+
+
+## Snake
+
+Game
+> _<https://github.com/Tolokov/pets/game/Snake.exe>_\
+
+![Snake](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/snake.gif?raw=true "GIF")
 
 
 ## Collecting news and publishing to the Telegram
