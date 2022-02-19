@@ -5,7 +5,7 @@
 
 :credit_card:[Internet catalog](#internet-catalog)
 
-:mega: [Snake](#snake)
+:snake: [Snake](#snake)
 
 :mega: [Parse and publish](#collecting-news-and-publishing-to-the-telegram)
 
@@ -29,7 +29,7 @@ Development of a site with a catalog of goods "E-shopper"
 ## Snake
 
 Game
-> _<https://github.com/Tolokov/pets/game/Snake.exe>_\
+> _<https://github.com/Tolokov/pets/raw/main/game/Snake.exe>_
 
 ![Snake](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/snake.gif?raw=true "GIF")
 

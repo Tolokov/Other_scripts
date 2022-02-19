@@ -387,7 +387,7 @@ class Snake:
         self.register_control_buttons()
         self.WINDOW.mainloop()
 
-
+# 2022/02/18 news:
 def main():
     game = Snake()
     game.start()
