@@ -1,12 +1,12 @@
-import datetime
-import re
+from re import findall, search
+from datetime import datetime
+
 import lxml
-import bs4
-import requests
+from requests import get, session
+from bs4 import BeautifulSoup
 
 
 class Session:
-
     def __init__(self):
         super().__init__()
         self.headers = {
@@ -19,17 +19,17 @@ class Session:
             'Upgrade-Insecure-Requests': '1',
             'Sec-ch-ua': '"Chromium";v="92", " Not A;Brand";v="99", "Yandex";v="21"',
         }
-        self.session = requests.session()
+        self.session = session()
         self.session.headers = self.headers
 
     def get_content(self, urls):
         web_content = list()
         for url in urls:
-            response = requests.get(url)
+            response = get(url)
             if response.status_code != 200:
                 print(response.status_code, 'status_code')
                 continue
-            soup = bs4.BeautifulSoup(response.content, 'lxml', from_encoding="utf-8")
+            soup = BeautifulSoup(response.content, 'lxml', from_encoding="utf-8")
             web_content.append(soup)
         return web_content
 
@@ -50,7 +50,7 @@ class Sites:
         self.count_posts += 1
 
     def price_decomposition(self, price):
-        numbs = re.findall(r'\d+', price)
+        numbs = findall(r'\d+', price)
         if len(numbs) == 1:
             return int(numbs[0])
         elif len(numbs) == 2:
@@ -75,7 +75,7 @@ class Sites:
                 script = post.find_all('script')
                 title = post.a.text
 
-            description = re.search(pattern_description, script[1].text)
+            description = search(pattern_description, script[1].text)
             if description is not None:
                 description = description.group(0)[1:200].replace('&nbsp;', '').replace('\u20bd', '')
             else:
@@ -86,13 +86,13 @@ class Sites:
             if 'По договоренности' in script[0].string:
                 price = '~'
             else:
-                price = re.search(pattern_price, script[0].string)
+                price = search(pattern_price, script[0].string)
                 if price is not None:
                     price = price.group(0).replace('&nbsp;', '')
                 else:
                     price = '~'
 
-            how_long = re.search(pattern_how_many_answers, script[2].text).group(0)[1:]
+            how_long = search(pattern_how_many_answers, script[2].text).group(0)[1:]
 
             timer = how_long.split()
             if len(timer) == 5:
@@ -109,7 +109,7 @@ class Sites:
                 continue
             self.counter()
 
-            how_many_answers = re.search(pattern_how_long, script[2].text).group(0)
+            how_many_answers = search(pattern_how_long, script[2].text).group(0)
             if '25' in how_many_answers:
                 how_many_answers = 25
             elif '10' in how_many_answers:
@@ -166,7 +166,7 @@ class Sites:
 
     def scrap_freelancejob(self, soup, time):
 
-        now = datetime.datetime.now()
+        now = datetime.now()
         pattern_date = r'[0-9]+.[0-9]+.[0-9]{4} в [0-9][0-9]:[0-9][0-9]'
 
         for post in soup.find_all('div', class_='x17'):
@@ -185,7 +185,7 @@ class Sites:
             how_many_answers = how_many_answers[-2:].replace(' ', '')
 
             how_long = post.find('div', class_='x20').text
-            how_long = re.search(pattern_date, how_long).group(0).replace('	', '')
+            how_long = search(pattern_date, how_long).group(0).replace('	', '')
 
             link = post.find('a').get('href')
             link = 'https://www.freelancejob.ru' + link
@@ -245,12 +245,12 @@ class Sites:
 
     def scrap_freelance(self, soup, time):
 
-        now = datetime.datetime.now()
+        now = datetime.now()
 
         for post in soup.find_all('div', class_='box-shadow'):
 
             title = post.find('a').text
-            title = re.findall(r'[а-яА-Я]+', title)
+            title = findall(r'[а-яА-Я]+', title)
             if len(title) == 1:
                 return title[0]
             elif len(title) > 1:

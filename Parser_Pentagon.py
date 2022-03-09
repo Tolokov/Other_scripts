@@ -1,11 +1,11 @@
-import aiohttp
-import asyncio
-from bs4 import BeautifulSoup
+from aiohttp import ClientSession
 from aiofiles import open
+from asyncio import gather, get_event_loop
+from bs4 import BeautifulSoup
 
 
 async def get_data_page(num_page):
-    async with aiohttp.ClientSession() as session:
+    async with ClientSession() as session:
         url = f'https://www.defense.gov/observe/photo-gallery/igphoto/{num_page}/'
 
         async with session.get(url) as response:
@@ -26,7 +26,7 @@ async def get_image(path, link_to_photo):
         if link_to_photo is not None:
             name = link_to_photo.split('/')
 
-            async with aiohttp.ClientSession() as session:
+            async with ClientSession() as session:
                 async with session.get(link_to_photo) as response:
                     content = await response.read()
                     async with open(f'{path}\\{name[-1]}', 'wb') as f:
@@ -56,11 +56,11 @@ async def run(start, finish, step, path):
                 task = get_data_page(page)
                 tasks_get_data.append(task)
 
-            for link in await asyncio.gather(*tasks_get_data):
+            for link in await gather(*tasks_get_data):
                 ta = get_image(path, link)
                 t_get_image.append(ta)
 
-            await asyncio.gather(*t_get_image)
+            await gather(*t_get_image)
 
             previous = p
 
@@ -89,6 +89,6 @@ async def main():
 
 # 2021/09/05 news: Yandex withstood the largest DDOS attack in the history of Runet
 if __name__ == '__main__':
-    main_loop = asyncio.get_event_loop()
+    main_loop = get_event_loop()
     main_loop.run_until_complete(main())
-    
+
