@@ -31,28 +31,27 @@ Development of a site with a catalog of goods "E-shopper"
 Game
 > _<https://github.com/Tolokov/pets/raw/main/game/Snake.exe>_
 
-![Snake](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/snake.gif?raw=true "GIF")
+![Snake](https://raw.githubusercontent.com/Tolokov/pets/main/Game/images/snake.gif?raw=true "GIF")
 
 
 ## Collecting news and publishing to the Telegram
 
-> _<https://t.me/NewsPanorama>_
 
-![Panorama parser](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/telegram_img3.png?raw=true "Photos")
+![Panorama parser](https://raw.githubusercontent.com/Tolokov/pets/main/Parsers/images/telegram_img3.png?raw=true "Photos")
 
 
 ## Pentagon async parser
 
 Saving images from the database.
-![Pentagon async parser](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/pentagon_img.png?raw=true "Photos")
+![Pentagon async parser](https://raw.githubusercontent.com/Tolokov/pets/main/Parsers/images/pentagon_img.png?raw=true "Photos")
 
 
 ## Freelance stocks parser
 
-![Freelance stocks parser](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/parser_img.png?raw=true "Console result")
+![Freelance stocks parser](https://raw.githubusercontent.com/Tolokov/pets/main/Parsers/images/parser_img.png?raw=true "Console result")
 
 
 ## Results of the Banned Sites Registry over 9 years
 
 Infographics on the number of blocked services in Russia, according to the Roskomsvoboda registry.
-![Results of the Banned Sites Registry over 9 years(2021 year)](https://github.com/Tolokov/pets/blob/main/report_ru_blacklist/images/other_images/img2-min.png?raw=true "Infographics")
+![Results of the Banned Sites Registry over 9 years(2021 year)](https://raw.githubusercontent.com/Tolokov/pets/main/Other/Blacklist_ru/images/img2.png?raw=true "Infographics")
