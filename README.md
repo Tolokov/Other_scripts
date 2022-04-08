@@ -29,9 +29,9 @@ Development of a site with a catalog of goods "E-shopper"
 ## Snake
 
 Game
-> _<https://github.com/Tolokov/pets/raw/main/game/Snake.exe>_
+> _<https://github.com/Tolokov/pets/raw/main/game/snake/Snake.exe>_
 
-![Snake](https://raw.githubusercontent.com/Tolokov/pets/main/Game/images/snake.gif?raw=true "GIF")
+![Snake](https://raw.githubusercontent.com/Tolokov/pets/main/Game/Snake/images/snake.gif?raw=true "GIF")
 
 
 ## Collecting news and publishing to the Telegram
