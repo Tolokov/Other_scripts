@@ -19,7 +19,7 @@
 ## Internet catalog
 
 Development of a site with a catalog of goods "E-shopper"
-> _<http://e-shopper.space/>_
+> ~~_<http://e-shopper.space/>_~~ Unfortunately the site is blocked
 
 > _<https://github.com/Tolokov/Shop>_
 
