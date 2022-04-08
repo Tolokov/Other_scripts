@@ -7,6 +7,10 @@ from bs4 import BeautifulSoup
 
 
 class Session:
+    """
+    Get content from the page
+    """
+
     def __init__(self):
         super().__init__()
         self.headers = {
@@ -27,7 +31,7 @@ class Session:
         for url in urls:
             response = get(url)
             if response.status_code != 200:
-                print(response.status_code, 'status_code')
+                print(response.status_code, 'status_code', url)
                 continue
             soup = BeautifulSoup(response.content, 'lxml', from_encoding="utf-8")
             web_content.append(soup)
@@ -35,6 +39,10 @@ class Session:
 
 
 class Sites:
+    """
+    Receiving all posts
+    """
+
     def __init__(self, all_sites):
         super().__init__()
         self.all_sites = all_sites
@@ -334,6 +342,9 @@ class Sites:
 
 
 class Scraper(Sites, Session):
+    """
+    Gets a list of sites, parses it, outputs the result to the console
+    """
 
     def __init__(self, *args):
         super().__init__(*args)
@@ -353,6 +364,7 @@ class Scraper(Sites, Session):
             )
 
     def scrapper(self, soups, time):
+        """place for error"""
         for soup in soups:
             match soup.title.text[:25]:
                 case '⭐Удаленная работа для про' | 'fl.ru':
@@ -383,13 +395,15 @@ class Scraper(Sites, Session):
 def main():
     # column selection mode
     sites = (
-        (True, 'https://www.fl.ru/projects/category/programmirovanie/'),
-        (False, 'https://freelancehunt.com/projects/skill/parsin-dannyih/169.html'),
-        (False, 'https://www.freelancejob.ru/projects/'),
-        (False, 'https://freelance.habr.com/tasks'),
-        (False, 'https://freelance.ru/project/search/pro?c=&q=парсинг&m=&e=&f=&t=&o=0&o=1'),
-        (False, 'https://www.weblancer.net/jobs/veb-programmirovanie-31/'),
-        (False, 'https://www.weblancer.net/jobs/veb-programmirovanie-31/?page=2'),
+        (True, 'https://freelance.habr.com/tasks'),
+        (True, 'https://www.weblancer.net/jobs/veb-programmirovanie-31/'),
+        (True, 'https://www.weblancer.net/jobs/veb-programmirovanie-31/?page=2'),
+
+        # These sites stopped working in mid-March, need update
+        # (False, 'https://www.fl.ru/projects/category/programmirovanie/'),
+        # (False, 'https://freelancehunt.com/projects/skill/parsin-dannyih/169.html'),
+        # (False, 'https://www.freelancejob.ru/projects/'),
+        # (False, 'https://freelance.ru/project/search/pro?c=&q=парсинг&m=&e=&f=&t=&o=0&o=1'),
     )
 
     Work = Scraper(sites)
