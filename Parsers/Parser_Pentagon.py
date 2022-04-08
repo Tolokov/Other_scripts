@@ -5,6 +5,9 @@ from bs4 import BeautifulSoup
 
 
 async def get_data_page(num_page):
+    """
+    Get pages. IF page is not exist, get None
+    """
     async with ClientSession() as session:
         url = f'https://www.defense.gov/observe/photo-gallery/igphoto/{num_page}/'
 
@@ -22,6 +25,9 @@ async def get_data_page(num_page):
 
 
 async def get_image(path, link_to_photo):
+    """
+    Get and save images.
+    """
     try:
         if link_to_photo is not None:
             name = link_to_photo.split('/')
@@ -45,6 +51,12 @@ async def get_image(path, link_to_photo):
 
 
 async def run(start, finish, step, path):
+    """
+    start - first page 2_000_000_000
+    finish - last page 2_002_847_499
+    step - number of asynchronously started tasks
+    path - path for saving images
+    """
     previous = start - step
     for p in range(start, finish, step):
 
@@ -72,9 +84,11 @@ async def run(start, finish, step, path):
 
 
 async def main():
-    # url = f'https://www.defense.gov/observe/photo-gallery/igphoto/'
-    # first_page = 2_000_000_000
-    # path = 'G:\\Parser'
+    """
+    url = f'https://www.defense.gov/observe/photo-gallery/igphoto/'
+    first_page = 2_000_000_000
+    my path is 'G:\\Parser'
+    """
 
     path = 'your path'
 
