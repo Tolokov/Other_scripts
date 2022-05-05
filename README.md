@@ -24,7 +24,7 @@ Development of a site with a catalog of goods "E-shopper"
 
 > _<https://github.com/Tolokov/Shop>_
 
-![Site functionality](https://github.com/Tolokov/Shop/blob/master/static/gif/functionality.gif?raw=true "GIF")
+![Site functionality](https://github.com/Tolokov/training-Dj_shop/blob/final/static/gif/functionality.gif?raw=true "GIF")
 
 
 ## Snake
